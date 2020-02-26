@@ -13,18 +13,38 @@
 <body>
     <form action="action_page.php" style="border:1px solid #ccc">
         <div class="container">
-            <h1>Sign Up</h1>
-            <p>Please fill in this form to create an account.</p>
+            <h1>Register</h1>
             <hr>
 
+            Select your Role
+            <input type="radio" name="Role" value="Student" onclick="hide_subject();" checked> Student
+            <input type="radio" name="Role" value="Mentor" onclick="show_subject();"> Mentor
+
+            <br />
+            <br />
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="john.doe@email.xyz" name="email" required>
+
+            <label for="name"><b>Name</b></label>
+            <input type="text" name="name" id="name" placeholder="John Doe" required>
 
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
             <label for="psw-repeat"><b>Repeat Password</b></label>
             <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <div id="subject">
+                <label for="name"><b>Subject</b></label>
+                <select class="dropdown-content">
+                    <option value="default" selected>choose the subject</option>
+                    <option value="maths">Maths</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                </select>
+            </div>
+
+            <br />
 
             <label>
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -34,8 +54,10 @@
                 <button type="button" class="cancelbtn">Cancel</button>
                 <button type="submit" class="signupbtn">Sign Up</button>
             </div>
+            <a href="login.html">Already have an account?</a>
         </div>
     </form>
 </body>
+<script src="JS/register_script.js"></script>
 
 </html>
