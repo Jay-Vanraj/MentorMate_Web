@@ -24,6 +24,36 @@ function openTab(evt, TabName) { // for tabbed pages
     }
 */
 
+var flag_ans = 0;
+/* To change sign of div answer */
+function change_sign_ans() {
+  flag_ans++;
+
+  if(flag_ans % 2 != 0)
+  {
+    document.getElementById("drop_id").innerHTML = "- ";
+  }
+  else
+  {
+    document.getElementById("drop_id").innerHTML = "+";
+  }
+}
+
+var flag_unans = 0;
+/* To change sign of div unanswered */
+function change_sign_unans() {
+  flag_unans++;
+
+  if(flag_unans % 2 != 0)
+  {
+    document.getElementById("drop_id_unans").innerHTML = "- ";
+  }
+  else
+  {
+    document.getElementById("drop_id_unans").innerHTML = "+";
+  }
+}
+
 // To open Form for adding question
 function openForm() {
     document.getElementById("popupForm").style.display="block";
@@ -88,6 +118,7 @@ function select_mentorm(s1,s2){ // add names to mentors in selection list dynami
 function db_add_ques() {
 
   var adda = document.getElementById("Questions").getElementById("ques_unans"); 
+  
   if (document.getElementById('slct1').value == "select" || document.getElementById('slct2').value == "select" || document.getElementById('textarea_question').value == "") {
       alert('Invalid Value Selected!');          
   }

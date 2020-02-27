@@ -8,7 +8,7 @@ body {
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 0px none #ccc;
   background-color: #f1f1f1;
 }
 
@@ -43,6 +43,9 @@ body {
 
 }
 
+/* */
+
+
 /* Fix the button on the left side of the page */
 .open-formbtn {
       display: flex;
@@ -55,12 +58,23 @@ body {
       color: white;
       padding: 12px 20px;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       cursor: pointer;
       opacity: 0.8;
+      width: 200px;
+      height: 50px;
       position: fixed;
-      right : 10px;
-      bottom: 10px
+      right : 50px;
+      bottom: 40px;
+      font-size: 1.2em;
+}
+
+/* Tab Contents*/
+.tablinks{
+  font-size: 25px;
+  font-weight: bold;
+  width: 50%;
+  border-radius: 10px;
 }
 
 /* Position the Popup form */
@@ -84,9 +98,9 @@ body {
 }
 
 /* Collapse Style*/
-#drop_id{
+#drop_id, #drop_id_unans{
   float: right;
-  text-transform: bold;
+  font-weight: bold;
   font-size: 20px;
 }
 
@@ -237,7 +251,6 @@ body {
       margin-bottom:10px;
       opacity: 0.8;      
 }
-}
       
 /* Hover effects for buttons */
 .form-container-m .btn-add-m:hover, .add-quest-button-m:hover {
@@ -249,13 +262,14 @@ body {
   background-color: #eee;
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 15px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
   transition: 0.4s;
+  font-size: 20px;
 }
 
 .active, .collapse:hover {
@@ -263,8 +277,9 @@ body {
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 20px 18px;
   display: none;
+  margin: 30px 0px;
   background-color: white;
   overflow: hidden;
 }
