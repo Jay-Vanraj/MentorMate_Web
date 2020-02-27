@@ -87,11 +87,7 @@ function select_mentorm(s1,s2){ // add names to mentors in selection list dynami
 // DB add queestion
 function db_add_ques() {
 
-  
   var adda = document.getElementById("Questions"); 
-  /*var aTag = document.createElement('a');
-  aTag.setAttribute('href',"a.html");
-  aTag.innerHTML = "link text";*/
   if (document.getElementById('slct1').value == "select" || document.getElementById('slct2').value == "select" || document.getElementById('textarea_question').value == "") {
       alert('Invalid Value Selected!');          
   }
@@ -131,10 +127,20 @@ function db_add_meet() {
   + "Time : "
   + document.getElementById("tm").value + "<br/>";
 
-  document.getElementById("Meetings").innerHTML=desc;
-      document.getElementById("onMeeting").click();
 
   //closeForm();
+
+
+  if (document.getElementById('slct1m').value == "select" || document.getElementById('slct2m').value == "select" || document.getElementById('dm').value == "" || document.getElementById('tm').value == "") {
+      alert('Invalid Value Selected!');          
+  }
+  else
+  {
+      document.getElementById("Meetings").innerHTML = desc;
+  }
+  
+  closeForm();
+
 }
 
 
