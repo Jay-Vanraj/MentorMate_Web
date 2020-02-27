@@ -132,6 +132,8 @@ function db_add_meet() {
   + document.getElementById("tm").value + "<br/>";
 
   document.getElementById("Meetings").innerHTML=desc;
+      document.getElementById("onMeeting").click();
+
   //closeForm();
 }
 
