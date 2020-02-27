@@ -1,5 +1,4 @@
-
-    function openTab(evt, TabName) { // for tabbed pages
+function openTab(evt, TabName) { // for tabbed pages
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
@@ -96,6 +95,18 @@ function db_add_ques() {
   adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
     closeForm();
 }
+
+function db_add_meet() {
+
+  
+  var adda = document.getElementById("Questions"); 
+  /*var aTag = document.createElement('a');
+  aTag.setAttribute('href',"a.html");
+  aTag.innerHTML = "link text";*/
+  adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
+    closeForm();
+}
+
 
 // To open Form for adding question for Meeting
 function openFormM() {
