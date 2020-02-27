@@ -1,4 +1,3 @@
-  
 * {
       box-sizing: border-box;
 }
@@ -41,6 +40,7 @@ body {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+
 }
 
 /* Fix the button on the left side of the page */
@@ -67,14 +67,15 @@ body {
 .form-popup {
       position: relative;
       text-align: justify;
-      width: 50%;
+      width: 70%;
+      margin-left: 46%;
 }
 
 /* Hide the Popup form */
 .form-content {
       display: none;
-      position: relative;
-      left: 45%;
+      position: absolute;
+      margin-top: 40%;
       top:5%;
       transform: translate(-45%,5%);
       border: 2px solid #666;
@@ -234,4 +235,3 @@ body {
 .form-container-m .btn-add-m:hover, .add-quest-button-m:hover {
       opacity: 1;
 }
-

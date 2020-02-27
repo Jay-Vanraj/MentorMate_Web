@@ -1,5 +1,4 @@
-
-    function openTab(evt, TabName) { // for tabbed pages
+function openTab(evt, TabName) { // for tabbed pages
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
