@@ -6,101 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/dashboard_student.css">
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-  <title>dashboard</title>
-  <style type="text/css">
-    * {
-      box-sizing: border-box;
-}
-body {
-      font-family: Roboto, Helvetica, sans-serif;
-}
-      /* Fix the button on the left side of the page */
-.open-btn {
-      display: flex;
-      justify-content: left;
-}
-      /* Style and fix the button on the page */
-.open-button {
-      background-color: #1c87c9;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      opacity: 0.8;
-      position: fixed;
-      right : 10px;
-      bottom: 10px
-}
-
-/* Position the Popup form */
-.login-popup {
-      position: relative;
-      text-align: justify;
-      width: 50%;
-}
-
-/* Hide the Popup form */
-.form-popup {
-      display: none;
-      position: relative;
-      left: 45%;
-      top:5%;
-      transform: translate(-45%,5%);
-      border: 2px solid #666;
-      z-index: 9;
-}
-
-/* Styles for the form container */
-.form-container {
-      max-width: 300px;
-      padding: 20px;
-      background-color: #fff;
-}
-
-/* Full-width for input fields */
-.form-container input[type=text], .form-container input[type=password] {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0 22px 0;
-      border: none;
-      background: #eee;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-      background-color: #ddd;
-      outline: none;
-}
-      
-/* Style submit/login button */
-.form-container .btn {
-      background-color: #8ebf42;
-      color: #fff;
-      padding: 12px 20px;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      margin-bottom:10px;
-      opacity: 0.8;      
-}
-
-/* Text Area Style for Question */
-#textarea_question{
-  border: 4px;
-  position: relative;
-}      
-
-/* Style cancel button */
-.form-container .cancel {
-      background-color: #cc0000;
-}
-      
-/* Hover effects for buttons */
-.form-container .btn:hover, .open-button:hover {
-      opacity: 1;
-}
-  </style>
+  <title>Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="CSS/dashboard.css">
 </head>
 
 <body>
@@ -113,10 +20,10 @@ body {
   <div id="Questions" class="tabcontent">
     <h3>Questions</h3>
     <div class="open-btn">
-      <button class="open-button" onclick="openForm()"><strong>Add Question</strong></button>
+      <button class="add-quest-button" onclick="openForm()"><strong>Add Question</strong></button>
     </div>
-    <div class="login-popup">
-      <div class="form-popup" id="popupForm">
+    <div class="form-popup">
+      <div class="form-content" id="popupForm">
         <form action="/add_quest.js" class="form-container">
           <h2 style="text-align: center;">Add Question</h2>
   
@@ -124,6 +31,7 @@ body {
           <select id="slct1" name="slct1" onchange="select_mentor(this.id,'slct2')">
             <option value="select">Select</option>
             <option value="Maths">Maths</option>
+
             <option value="Science">Science</option>
             <option value="English">English</option>
           </select>
@@ -140,7 +48,7 @@ body {
 
           <br><br>
           
-          <button type="submit" class="btn" onclick="db_add_ques()">Add Query</button>
+          <button type="submit" class="btn-add" onclick="db_add_ques()">Add Query</button>
           <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </form>
       </div>
@@ -150,79 +58,7 @@ body {
   <div id="Meetings" class="tabcontent">
     <h3>Meetings</h3>
   </div>
-
-
-
-  <script>
-    function openTab(evt, TabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(TabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-/*
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-*/
-
-// To open Form for adding question
-function openForm() {
-    document.getElementById("popupForm").style.display="block";
-}
-
-// CLose the form      
-function closeForm() {
-    document.getElementById("popupForm").style.display="none";
-}
-      
-function select_mentor(s1,s2){
-    var s1 = document.getElementById(s1);
-    var s2 = document.getElementById(s2);
-    s2.innerHTML = "";
-        
-    if(s1.value == "Maths"){
-        var optionArray = ["select|Select", "jaysan|Jaysan","mihir|Mihir","rekha|Rekha"];
-    } 
-    else if(s1.value == "Science"){
-        var optionArray = ["select|Select", "isha|Isha","ankita|Ankita","prayag|Prayag"];
-    } 
-    else if(s1.value == "English"){
-        var optionArray = ["select|Select", "shalin|Shalin","saurabh|Saurabh"];
-    }
-      
-    for(var option in optionArray){
-        var pair = optionArray[option].split('|');
-        var newOption = document.createElement("option");
-        newOption.value = pair[0];
-        newOption.innerHTML = pair[1];
-        s2.options.add(newOption);
-    }
-}
-
-
-// DB add queestion
-function db_add_ques() {
-
-
-
-    closeForm();
-}
-  </script>
+  <script type="text/javascript" src="JS/dashboard.js"></script>
 
 </body>
 
