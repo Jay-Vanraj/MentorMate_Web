@@ -92,7 +92,9 @@ function db_add_ques() {
   /*var aTag = document.createElement('a');
   aTag.setAttribute('href',"a.html");
   aTag.innerHTML = "link text";*/
+
   adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
+  
     closeForm();
 }
 
