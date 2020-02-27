@@ -47,13 +47,13 @@ body {
 
 
 /* Fix the button on the left side of the page */
-.open-formbtn {
+.open-formbtn, .open-formbtn-m {
       display: flex;
       justify-content: left;
 }
 
 /* Style and fix the button on the page */
-.add-quest-button {
+.add-quest-button, .add-meet-button {
       background-color: #1c87c9;
       color: white;
       padding: 12px 20px;

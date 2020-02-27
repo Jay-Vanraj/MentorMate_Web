@@ -62,6 +62,7 @@ function openForm() {
 // CLose the form      
 function closeForm() {
     document.getElementById("popupForm").style.display="none";
+    document.getElementById("popupFormM").style.display="none";
 }
       
 function select_mentor(s1,s2){ // add names to mentors in selection list dynamically
