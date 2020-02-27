@@ -1,4 +1,4 @@
-
+  
 * {
       box-sizing: border-box;
 }
@@ -42,13 +42,15 @@ body {
   border: 1px solid #ccc;
   border-top: none;
 }
-      /* Fix the button on the left side of the page */
-.open-btn {
+
+/* Fix the button on the left side of the page */
+.open-formbtn {
       display: flex;
       justify-content: left;
 }
-      /* Style and fix the button on the page */
-.open-button {
+
+/* Style and fix the button on the page */
+.add-quest-button {
       background-color: #1c87c9;
       color: white;
       padding: 12px 20px;
@@ -62,14 +64,14 @@ body {
 }
 
 /* Position the Popup form */
-.login-popup {
+.form-popup {
       position: relative;
       text-align: justify;
       width: 50%;
 }
 
 /* Hide the Popup form */
-.form-popup {
+.form-content {
       display: none;
       position: relative;
       left: 45%;
@@ -102,7 +104,7 @@ body {
 }
       
 /* Style submit/login button */
-.form-container .btn {
+.form-container .btn-add {
       background-color: #8ebf42;
       color: #fff;
       padding: 12px 20px;
@@ -125,6 +127,6 @@ body {
 }
       
 /* Hover effects for buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn-add:hover, .add-quest-button:hover {
       opacity: 1;
 }
