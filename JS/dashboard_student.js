@@ -92,7 +92,13 @@ function db_add_ques() {
   /*var aTag = document.createElement('a');
   aTag.setAttribute('href',"a.html");
   aTag.innerHTML = "link text";*/
-  adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
+  if (document.getElementById('slct1').value == "select" || document.getElementById('slct2').value == "select" || document.getElementById('textarea_question').value == "") {
+      alert('Invalid Value Selected!');          
+  }
+  else
+  {
+      adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
+  }
     closeForm();
 }
 

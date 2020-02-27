@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="#">
+		  <label for="subject"><b>Choose Subject : </b></label>
+          <select id="slct1" name="slct1" required="required" onchange="select_mentor(this.id,'slct2')">
+            <option value="select">Select</option>
+            <option value="Maths">Maths</option>
+            <option value="Science">Science</option>
+            <option value="English">English</option>
+          </select>
+            
+          <br><br>
+
+          <label for="mentor"><b>Choose Mentor : </b></label>
+          <select id="slct2" name="slct2">
+            <option value="select">Select</option>
+          </select><br><br>
+
+          <label for="question"><b>Question: </b></label>
+          <textarea name="question" rows="1" cols="20" id="textarea_question"></textarea>
+
+          <br><br>
+          
+          <button type="submit" class="btn-add" onclick="db_add_ques()">Add Query</button>		
+	</form>
+
+	<script type="text/javascript">
+		function db_add_ques() {
+
+  			if (document.getElementById('slct1').value == "select") {
+  				alert('Please select subject!');
+  				//return false;
+  			}
+  			//return true;
+
+			var adda = document.getElementById("Questions"); 
+			  /*var aTag = document.createElement('a');
+			  aTag.setAttribute('href',"a.html");
+			  aTag.innerHTML = "link text";*/
+
+			adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
+			  
+			//closeForm();
+		}
+	</script>
+</body>
+</html>
