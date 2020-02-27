@@ -38,7 +38,7 @@ body {
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 0px;
   border-top: none;
 
 }
@@ -64,8 +64,8 @@ body {
       width: 200px;
       height: 50px;
       position: fixed;
-      right : 50px;
-      bottom: 40px;
+      right : 7%;
+      bottom: 5%;
       font-size: 1.2em;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 /* Position the Popup form */
-.form-popup {
+.form-popup, .form-popup-m {
       position: relative;
       text-align: justify;
       width: 70%;
@@ -87,14 +87,15 @@ body {
 
 
 /* Hide the Popup form */
-.form-content {
+.form-content, .form-content-m {
       display: none;
-      position: absolute;
-      margin-top: 10%;
-      top:5%;
+      position: relative;
+      margin-top: 20%;
       transform: translate(-45%,5%);
       border: 2px solid #666;
       z-index: 9;
+      width: 100%;
+      height: 70% !important;
 }
 
 /* Collapse Style*/
@@ -105,14 +106,15 @@ body {
 }
 
 /* Styles for the form container */
-.form-container {
+.form-container, .form-container-m {
       max-width: 300px;
       padding: 20px;
       background-color: #fff;
+      margin-left: 2%;
 }
 
 /* Full-width for input fields */
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text], .form-container-m input[type=text], .form-container input[type=password], .form-container-m input[type=password] {
       width: 100%;
       padding: 10px;
       margin: 5px 0 22px 0;
@@ -121,31 +123,32 @@ body {
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container-m input[type=text]:focus, .form-container-m input[type=password]:focus {
       background-color: #ddd;
       outline: none;
 }
       
 /* Style submit/login button */
-.form-container .btn-add {
-      background-color: #8ebf42;
-      color: #fff;
+.form-container .btn-add, .form-container-m .btn-add-m {
+      background-color: #1c87c9;
+      font-color: #fff;
       padding: 12px 20px;
       border: none;
       cursor: pointer;
       width: 100%;
       margin-bottom:10px;
-      opacity: 0.8;      
+      opacity: 0.8;  
+      background-color:     
 }
 
 /* Text Area Style for Question */
 #textarea_question{
-  border: 4px;
+  border: 3px solid black;
   position: relative;
 }      
 
 /* Style cancel button */
-.form-container .btn-cancel {
+.form-container .btn-cancel, .form-container-m .btn-cancel-m {
       background-color: #cc0000;
       color: #fff;
       padding: 12px 20px;
@@ -158,46 +161,8 @@ body {
 }
       
 /* Hover effects for buttons */
-.form-container .btn-add:hover, .add-quest-button:hover {
+.form-container .btn-add:hover, .add-quest-button:hover, .form-container-m .btn-add:hover, .add-meet-button:hover {
       opacity: 1;
-}
-
-/* Fix the button on the left side of the page for meeting */
-.open-formbtn-m {
-      display: flex;
-      justify-content: left;
-}
-
-/* Style and fix the button on the page  for meeting*/
-.add-meet-button {
-      background-color: #1c87c9;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      opacity: 0.8;
-      position: fixed;
-      right : 10px;
-      bottom: 10px
-}
-
-/* Position the Popup form */
-.form-popup-m {
-      position: relative;
-      text-align: justify;
-      width: 50%;
-}
-
-/* Hide the Popup form */
-.form-content-m {
-      display: none;
-      position: relative;
-      left: 45%;
-      top:5%;
-      transform: translate(-45%,5%);
-      border: 2px solid #666;
-      z-index: 9;
 }
 
 /* Styles for the form container */

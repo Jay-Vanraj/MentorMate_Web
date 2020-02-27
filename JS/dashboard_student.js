@@ -27,6 +27,7 @@ function openTab(evt, TabName) { // for tabbed pages
 var flag_ans = 0;
 /* To change sign of div answer */
 function change_sign_ans() {
+  document.getElementById('');
   flag_ans++;
 
   if(flag_ans % 2 != 0)
@@ -119,7 +120,7 @@ function select_mentorm(s1,s2){ // add names to mentors in selection list dynami
 function db_add_ques() {
 
   var adda = document.getElementById("Questions").getElementById("ques_unans"); 
-  
+
   if (document.getElementById('slct1').value == "select" || document.getElementById('slct2').value == "select" || document.getElementById('textarea_question').value == "") {
       alert('Invalid Value Selected!');          
   }
