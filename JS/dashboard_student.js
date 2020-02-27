@@ -119,14 +119,14 @@ function select_mentorm(s1,s2){ // add names to mentors in selection list dynami
 // DB add queestion
 function db_add_ques() {
 
-  var adda = document.getElementById("Questions").getElementById("ques_unans").getElementsByClassName('panel_unans'); 
+  var adda = document.getElementById("Questions").getElementById("ques_unans"); 
 
   if (document.getElementById('slct1').value == "select" || document.getElementById('slct2').value == "select" || document.getElementById('textarea_question').value == "") {
       alert('Invalid Value Selected!');          
   }
   else
   {
-      adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>"; //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
+      adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
   }
     //closeForm();
 }
