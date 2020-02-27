@@ -117,7 +117,7 @@ body {
     </div>
     <div class="login-popup">
       <div class="form-popup" id="popupForm">
-        <form action="/add_quest.js" class="form-container">
+        <form class="form-container">
           <h2 style="text-align: center;">Add Question</h2>
   
           <label for="subject"><b>Choose Subject : </b></label>
@@ -154,7 +154,7 @@ body {
 
 
   <script>
-    function openTab(evt, TabName) {
+    function openTab(evt, TabName) { // for tabbed pages
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
@@ -190,7 +190,7 @@ function closeForm() {
     document.getElementById("popupForm").style.display="none";
 }
       
-function select_mentor(s1,s2){
+function select_mentor(s1,s2){ // add names to mentors in selection list dynamically
     var s1 = document.getElementById(s1);
     var s2 = document.getElementById(s2);
     s2.innerHTML = "";
@@ -218,8 +218,12 @@ function select_mentor(s1,s2){
 // DB add queestion
 function db_add_ques() {
 
-
-
+  
+  var adda = document.getElementById("Questions"); 
+  /*var aTag = document.createElement('a');
+  aTag.setAttribute('href',"a.html");
+  aTag.innerHTML = "link text";*/
+  adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a>"//the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
     closeForm();
 }
   </script>
