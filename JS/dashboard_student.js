@@ -62,7 +62,7 @@ function openForm() {
 // CLose the form      
 function closeForm() {
     document.getElementById("popupForm").style.display="none";
-    document.getElementById("popupFormM").style.display="none";
+
 }
       
 function select_mentor(s1,s2){ // add names to mentors in selection list dynamically
@@ -127,7 +127,7 @@ function db_add_ques() {
   {
       adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
   }
-    //closeForm();
+  closeForm();
 }
 
 function db_add_meet() {
@@ -171,7 +171,7 @@ function db_add_meet() {
       document.getElementById("Meetings").innerHTML = desc;
   }
   
-  closeForm();
+  closeFormM();
 
 }
 
@@ -179,6 +179,10 @@ function db_add_meet() {
 // To open Form for adding question for Meeting
 function openFormM() {
     document.getElementById("popupFormM").style.display="block";
+}
+
+function closeFormM() {
+    document.getElementById("popupFormM").style.display="none";
 }
 
 /* Collapsible Menu for Questions Seperation*/
