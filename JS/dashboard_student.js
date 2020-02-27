@@ -87,7 +87,7 @@ function select_mentorm(s1,s2){ // add names to mentors in selection list dynami
 // DB add queestion
 function db_add_ques() {
 
-  var adda = document.getElementById("Questions"); 
+  var adda = document.getElementById("Questions").getElementById("ques_unans"); 
   if (document.getElementById('slct1').value == "select" || document.getElementById('slct2').value == "select" || document.getElementById('textarea_question').value == "") {
       alert('Invalid Value Selected!');          
   }
@@ -95,7 +95,7 @@ function db_add_ques() {
   {
       adda.innerHTML = adda.innerHTML + "<a href = \"a.html\">HELLO</a> <br>" //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
   }
-    closeForm();
+    //closeForm();
 }
 
 function db_add_meet() {
@@ -142,4 +142,20 @@ function db_add_meet() {
 // To open Form for adding question for Meeting
 function openFormM() {
     document.getElementById("popupFormM").style.display="block";
+}
+
+/* Collapsible Menu for Questions Seperation*/
+var acc = document.getElementsByClassName("collapse");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
