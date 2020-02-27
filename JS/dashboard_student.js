@@ -98,6 +98,40 @@ function db_add_ques() {
     closeForm();
 }
 
+function db_add_meet() {
+ 
+  /*var s1 = document.getElementById("slct1m").value;
+  var s2 = document.getElementById("slct2m").value;
+  var d = document.getElementById("dm").value;
+  var t = document.getElementById("tm").value;
+  var desc = " ";
+  desc = desc + s1 + s2 + d + t;
+  var para = document.createElement('p');
+  var text = document.createTextNode(desc);
+  para.appendChild(text);
+
+  var ele = document.getElementById("Meetings");
+  ele.appendChild(para);
+  // var desc = " Hello";
+  //addst.innerHTML = addst.innerHTML + desc + <br/> //the lines in quotes is to be added using string processing | currently only adds link to a.html and name HELLO
+*/
+
+  var desc = " ";
+
+  desc = desc + "Subject : "
+  + document.getElementById("slct1m").value + "<br/>" 
+  + "Mentor : "
+  + document.getElementById("slct2m").value + "<br/>"
+  + "Date : "
+  + document.getElementById("dm").value + "<br/>"
+  + "Time : "
+  + document.getElementById("tm").value + "<br/>";
+
+  document.getElementById("Meetings").innerHTML=desc;
+  closeForm();
+}
+
+
 // To open Form for adding question for Meeting
 function openFormM() {
     document.getElementById("popupFormM").style.display="block";
