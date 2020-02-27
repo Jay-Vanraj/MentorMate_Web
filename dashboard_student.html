@@ -58,8 +58,45 @@
 
   <div id="Meetings" class="tabcontent">
 
-    <h3>Meetings</h3>
+    <h2>Meetings</h2>
+     <div class="open-formbtn-m">
+      <button class="add-meet-button" onclick="openFormM()"><strong>Add Meeting</strong></button>
+    </div>
 
+    <div class="form-popup-m"><!--pop up for meeting-->
+      <div class="form-content-m" id="popupFormM">
+
+
+        <form class="form-container-m">
+          <h2 style="text-align: center;">Add Meeting</h2>
+  
+          <label for="subject"><b>Choose Subject : </b></label>
+          <select id="slct1m" name="slct1m" onchange="select_mentorm(this.id,'slct2m')">
+            <option value="select">Select</option>
+            <option value="Maths">Maths</option>
+            <option value="Science">Science</option>
+            <option value="English">English</option>
+          </select>
+            
+          <br><br>
+
+          <label for="mentor"><b>Choose Mentor : </b></label>
+          <select id="slct2m" name="slct2m">
+            <option value="select">Select</option>
+          </select><br><br>
+
+          <label for="Date"><b>Date: </b></label>
+          <input type="Date" name="DateSM"/><br/>
+          <label for="Time"><b>Time: </b></label>
+          <input type="Time" name="TimeSM"/>
+
+          <br><br>
+          
+          <button type="submit" class="btn-add-m" onclick="db_add_ques()">Add Query</button>
+          <button type="button" class="btn-cancel-m" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    </div>
   </div>
 
 

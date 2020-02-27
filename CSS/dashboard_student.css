@@ -122,11 +122,116 @@ body {
 }      
 
 /* Style cancel button */
-.form-container .cancel {
+.form-container .btn-cancel {
       background-color: #cc0000;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;      
+
 }
       
 /* Hover effects for buttons */
 .form-container .btn-add:hover, .add-quest-button:hover {
       opacity: 1;
 }
+
+/* Fix the button on the left side of the page for meeting */
+.open-formbtn-m {
+      display: flex;
+      justify-content: left;
+}
+
+/* Style and fix the button on the page  for meeting*/
+.add-meet-button {
+      background-color: #1c87c9;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      right : 10px;
+      bottom: 10px
+}
+
+/* Position the Popup form */
+.form-popup-m {
+      position: relative;
+      text-align: justify;
+      width: 50%;
+}
+
+/* Hide the Popup form */
+.form-content-m {
+      display: none;
+      position: relative;
+      left: 45%;
+      top:5%;
+      transform: translate(-45%,5%);
+      border: 2px solid #666;
+      z-index: 9;
+}
+
+/* Styles for the form container */
+.form-container-m {
+      max-width: 300px;
+      padding: 20px;
+      background-color: #fff;
+}
+
+/* Full-width for input fields */
+.form-container-m input[type=text], .form-container-m input[type=password] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #eee;
+}
+
+/* When the inputs get focus, do something */
+.form-container-m input[type=text]:focus, .form-container-m input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+}
+      
+/* Style submit/login button */
+.form-container-m .btn-add-m {
+      background-color: #8ebf42;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;      
+}
+
+/* Text Area Style for Question */
+#textarea_question{
+  border: 4px;
+  position: relative;
+}      
+
+/* Style cancel button */
+.form-container-m .btn-cancel-m {
+      background-color: #cc0000;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;      
+}
+}
+      
+/* Hover effects for buttons */
+.form-container-m .btn-add-m:hover, .add-quest-button-m:hover {
+      opacity: 1;
+}
+
