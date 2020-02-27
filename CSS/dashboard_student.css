@@ -1,0 +1,250 @@
+* {
+      box-sizing: border-box;
+}
+body {
+      font-family: Roboto, Helvetica, sans-serif;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 0px none #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 0px;
+  border-top: none;
+
+}
+
+/* */
+
+
+/* Fix the button on the left side of the page */
+.open-formbtn, .open-formbtn-m {
+      display: flex;
+      justify-content: left;
+}
+
+/* Style and fix the button on the page */
+.add-quest-button, .add-meet-button {
+      background-color: #1c87c9;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      opacity: 0.8;
+      width: 200px;
+      height: 50px;
+      position: fixed;
+      right : 7%;
+      bottom: 5%;
+      font-size: 1.2em;
+}
+
+/* Tab Contents*/
+.tablinks{
+  font-size: 25px;
+  font-weight: bold;
+  width: 50%;
+  border-radius: 10px;
+}
+
+/* Position the Popup form */
+.form-popup, .form-popup-m {
+      position: relative;
+      text-align: justify;
+      width: 70%;
+      margin-left: 46%;
+}
+
+
+/* Hide the Popup form */
+.form-content, .form-content-m {
+      display: none;
+      position: relative;
+      margin-top: 15%;
+      transform: translate(-45%,5%);
+      border: 2px solid #666;
+      z-index: 9;
+      width: 100%;
+      height: 50% !important;
+}
+
+/* Collapse Style*/
+#drop_id, #drop_id_unans{
+  float: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Styles for the form container */
+.form-container, .form-container-m {
+      max-width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      margin-left: 2%;
+}
+
+/* Full-width for input fields */
+.form-container input[type=text], .form-container-m input[type=text], .form-container input[type=password], .form-container-m input[type=password] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #eee;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container-m input[type=text]:focus, .form-container-m input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+}
+      
+/* Style submit/login button */
+.form-container .btn-add, .form-container-m .btn-add-m {
+      background-color: #1c87c9;
+      font-color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;  
+      background-color:     
+}
+
+/* Text Area Style for Question */
+#textarea_question{
+  border: 3px solid black;
+  position: relative;
+}      
+
+/* Style cancel button */
+.form-container .btn-cancel, .form-container-m .btn-cancel-m {
+      background-color: #cc0000;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;      
+
+}
+      
+/* Hover effects for buttons */
+.form-container .btn-add:hover, .add-quest-button:hover, .form-container-m .btn-add:hover, .add-meet-button:hover {
+      opacity: 1;
+}
+
+/* Styles for the form container */
+.form-container-m {
+      max-width: 300px;
+      padding: 20px;
+      background-color: #fff;
+}
+
+/* Full-width for input fields */
+.form-container-m input[type=text], .form-container-m input[type=password] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #eee;
+}
+
+/* When the inputs get focus, do something */
+.form-container-m input[type=text]:focus, .form-container-m input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+}
+      
+/* Style submit/login button */
+.form-container-m .btn-add-m {
+      background-color: #8ebf42;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;      
+}
+
+/* Text Area Style for Question */
+#textarea_question{
+  border: 4px;
+  position: relative;
+}      
+
+/* Style cancel button */
+.form-container-m .btn-cancel-m {
+      background-color: #cc0000;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;      
+}
+      
+/* Hover effects for buttons */
+.form-container-m .btn-add-m:hover, .add-quest-button-m:hover {
+      opacity: 1;
+}
+
+/* Styling for Collapsible Menu*/
+.collapse {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-size: 20px;
+}
+
+.active, .collapse:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 20px 18px;
+  display: none;
+  margin: 30px 0px;
+  background-color: white;
+  overflow: hidden;
+}
